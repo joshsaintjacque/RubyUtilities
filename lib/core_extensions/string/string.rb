@@ -130,6 +130,12 @@ module CoreExtensions
       return encoded_string.join('')
     end
 
+    # Public: Destructive version of urlify.
+    def urlify!
+      self.urlify
+      replace urlify
+    end
+
 
     private
     # Internal: A hash table of hex-encoded characters.
