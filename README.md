@@ -1,4 +1,4 @@
-# Ruby Utility Extensions
+# Ruby Utilities
 A series of useful classes and extensions for the Ruby core. 
 
 ## What's Inside
