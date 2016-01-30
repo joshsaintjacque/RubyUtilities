@@ -6,6 +6,9 @@ A series of useful extensions for the Ruby core.
 ## How to Use It
 
 ## Inspiration/Credits
+The problems solved by this codebase came from a number of sources:
+* "Cracking the Coding Interview", 6th Edition.
+* Issues I've needed to solve on unrelated projects.
 
 ## License
 The MIT License (MIT)
