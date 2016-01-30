@@ -1,5 +1,5 @@
-# Ruby Core Extensions
-A series of useful extensions for the Ruby core. 
+# Ruby Utility Extensions
+A series of useful classes and extensions for the Ruby core. 
 
 ## What's Inside
 
