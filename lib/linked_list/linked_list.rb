@@ -81,4 +81,20 @@ class LinkedList
     unique_values.each {|value| unshift(Node.new(value))}
     return self
   end
+
+  # Public: Returns the ith node in the list from head, where 0 is the head.
+  #
+  # Examples
+  #
+  #   list.index 2
+  #   => #<Node:0x007fce12a9ee70 @value=1, @next=...
+  #
+  # Returns ith Node object.
+  def index(i)
+    buffer = LinkedList.new
+    i.times { buffer.unshift shift }
+    node = head
+    i.times { unshift buffer.shift }
+    return node
+  end
 end
