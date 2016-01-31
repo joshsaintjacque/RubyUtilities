@@ -1,5 +1,7 @@
 class LinkedList
+  require_relative 'node'
   include Enumerable
+  attr_reader :head, :tail
 
   def initialize
     @head = nil
@@ -58,23 +60,6 @@ class LinkedList
     else
       @tail.next = node
       @tail = node
-    end
-  end
-
-  # Public: Successively yields each node in a linked list.
-  #
-  # Examples
-  #
-  #   "abc".is_permutation? "cba"
-  #   # => true
-  #
-  # Returns nothing.
-  def each
-    return nil if @head.nil?
-    node = @head
-    until entry.nil?
-      yield entry
-      node = node.next
     end
   end
 end
