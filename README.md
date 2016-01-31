@@ -7,7 +7,7 @@ Various supporting modules including additions to the Ruby core and new classes.
 ## How to Use It
 
 ## Inspiration/Credits
-The problems solved by this codebase came from a number of sources:
+Credit to the following sources for both coming up with problems to solve and providing insight into how to solve them:
 * "Cracking the Coding Interview", 6th Edition.
 * This blog post about [Reversing a Linked List in Ruby](http://commandercoriander.net/blog/2012/12/23/reversing-a-linked-list-in-ruby/) was very helpful in working through linked lists.
 * Issues I've needed to solve on unrelated projects.
