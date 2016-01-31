@@ -1,12 +1,11 @@
 require_relative '../linked_list/linked_list.rb'
+require 'pp'
 
 describe LinkedList do
   before(:each) do
     @node1 = Node.new 42
     @node2 = Node.new "Stuff"
     @node3 = Node.new [1, 2, 3]
-    @node1.next = @node2
-    @node2.next = @node3
     @list = LinkedList.new
     @list.unshift @node2
     @list.unshift @node1
@@ -33,5 +32,11 @@ describe LinkedList do
   it "removes a node from the top of the list" do
     @list.shift
     expect(@list.head).to eq(@node2)
+  end
+
+  it "removes duplicate node values from a list" do
+    @list.push Node.new 42
+    @list.remove_dups
+    expect(@list.head.value).not_to eq(@list.head.next.value)
   end
 end

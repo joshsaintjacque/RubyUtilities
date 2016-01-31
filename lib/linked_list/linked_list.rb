@@ -14,8 +14,8 @@ class LinkedList
   #
   # Examples
   #
-  #   "abc".is_permutation? "cba"
-  #   # => true
+  #   list.unshift node
+  #   => <Node:0x007fce12a9ee70 @value=1, @next=#<Node:0x007fce12a8d170 @value=2, @next=nil>>
   #
   # Returns nothing.
   def unshift(node)
@@ -61,5 +61,24 @@ class LinkedList
       @tail.next = node
       @tail = node
     end
+  end
+
+  # Public: Removes duplicate values from the link list it is called on.
+  # Destructive.
+  #
+  # Examples
+  #
+  #   list.remove_dups
+  #
+  # Returns nothing.
+  def remove_dups
+    unique_values = []
+    while head
+      node = shift
+      value = node.value
+      unique_values << value unless unique_values.include? value
+    end
+    unique_values.each {|value| unshift(Node.new(value))}
+    return self
   end
 end
