@@ -15,7 +15,7 @@ class LinkedList
   # Examples
   #
   #   list.unshift node
-  #   => <Node:0x007fce12a9ee70 @value=1, @next=#<Node:0x007fce12a8d170 @value=2, @next=nil>>
+  #   => #<Node:0x007fce12a9ee70 @value=1, @next=...
   #
   # Returns nothing.
   def unshift(node)
@@ -32,10 +32,10 @@ class LinkedList
   #
   # Examples
   #
-  #   "abc".is_permutation? "cba"
-  #   # => true
+  #   list.shift
+  #   # => #<Node:0x007fce12a9ee70 @value=1, @next=...
   #
-  # Returns nothing.
+  # Returns Node object.
   def shift
     return nil if @head.nil?
     node = @head
@@ -49,8 +49,8 @@ class LinkedList
   #
   # Examples
   #
-  #   "abc".is_permutation? "cba"
-  #   # => true
+  #   list.push node
+  #   # => #<Node:0x007fce12a9ee70 @value=1, @next=...
   #
   # Returns nothing.
   def push(node)
