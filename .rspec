@@ -1,0 +1,2 @@
+--default-path lib/spec/
+--pattern *_spec.rb
