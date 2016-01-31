@@ -6,6 +6,21 @@ Various supporting modules including additions to the Ruby core and new classes.
 
 ## How to Use It
 
+### Installation
+
+### Running the tests
+Simply run `rspec` from the root of the project.
+
+```
+$ rspec
+.................................
+
+Finished in 0.01279 seconds (files took 0.1362 seconds to load)
+33 examples, 0 failures
+```
+
+### Examples
+
 ## Inspiration/Credits
 Credit to the following sources for both coming up with problems to solve and providing insight into how to solve them:
 * "Cracking the Coding Interview", 6th Edition.
