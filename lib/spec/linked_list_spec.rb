@@ -39,4 +39,13 @@ describe LinkedList do
     @list.remove_dups
     expect(@list.head.value).not_to eq(@list.head.next.value)
   end
+
+  it "traverses a list" do
+    @list.push Node.new 42
+    expect(@list.traverse(2).value).to eq(42)
+  end
+
+  it "returns the length of the list" do
+    expect(@list.length).to eq(2)
+  end
 end

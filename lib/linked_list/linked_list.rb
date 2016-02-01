@@ -99,7 +99,27 @@ class LinkedList
     return node
   end
 
-  # Public: Partitions a linked list such that all values less than k are
+  # Public: Returns the length of the LinkedList. Returns 0 if the list if
+  # empty.
+  #
+  # Examples
+  #
+  #   list.length
+  #   => 3
+  #
+  # Returns an Integer length of LinkedList.
+  def length
+    return 0 if head.nil?
+    node = head
+    length = 1
+    while node.next
+      node = node.next
+      length += 1
+    end
+    return length
+  end
+
+  # Public: Partition a linked list such that all values less than k are
   # placed before all node values equal to and greater than k in the list.
   # Destructive.
   #
@@ -112,6 +132,17 @@ class LinkedList
   #
   # Returns a LinkedList object.
   def partition(k)
-
+    less_than_k, k_and_larger = LinkedList.new, LinkedList.new
+    previous_node = nil
+    while head
+      node = shift
+      node.data > x ? less_than_k.unshift(node) : k_and_larger.unshift(node)
+      previous_node.next = node if previous_node
+      previous_node = node
+    end
+    while k_and_larger.head
+      less_than_k.unshift k_and_larger.shift
+    end
+    return less_than_k
   end
 end
