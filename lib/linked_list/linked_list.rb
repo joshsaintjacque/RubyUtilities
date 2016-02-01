@@ -84,17 +84,34 @@ class LinkedList
 
   # Public: Returns the ith node in the list from head, where 0 is the head.
   #
+  # i  - The index to be returned.
+  #
   # Examples
   #
-  #   list.index 2
+  #   list.traverse 2
   #   => #<Node:0x007fce12a9ee70 @value=1, @next=...
   #
   # Returns ith Node object.
-  def index(i)
-    buffer = LinkedList.new
-    i.times { buffer.unshift shift }
+  def traverse(i)
+    return nil if head.nil?
     node = head
-    i.times { unshift buffer.shift }
+    i.times { node = node.next }
     return node
+  end
+
+  # Public: Partitions a linked list such that all values less than k are
+  # placed before all node values equal to and greater than k in the list.
+  # Destructive.
+  #
+  # k  - The value to be partitioned on.
+  #
+  # Examples
+  #
+  #   list.partition 5
+  #   => #<Node:0x007fce12a9ee70 @value=1, @next=...
+  #
+  # Returns a LinkedList object.
+  def partition(k)
+
   end
 end
